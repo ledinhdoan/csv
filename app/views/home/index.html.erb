@@ -1,2 +1,19 @@
-<h1>Đây là màn hình</h1>
+<h1>Đây là màn hình list user</h1>
+<table>
+  <thead>
+    <th>name</th>
+    <th>email</th>
+    <th>phone</th>
+    <th>address</th>
+  </thead>
+  <% @users.each do |u| %>
+    <tbody>
+      <td><%= u.name %></td>
+      <td><%= u.email %></td>
+      <td><%= u.phone %></td>
+      <td><%= u.address %></td>
+    </tbody>
+  <% end %>
+</table>
+<%= link_to "Import", imports_path %>
 <%= link_to "Ếch pọt", export_users_path(format: :csv) %>
